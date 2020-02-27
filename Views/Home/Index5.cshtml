@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Index5";
+}
+
+<h1>Listor med olika tekniker</h1>
+<br />
+<b> Personer - Lista från ViewData </b>
+
+@{
+    IEnumerable<Moment2.Models.Person> personer = (IEnumerable<Moment2.Models.Person>)ViewData["personer_i_lista"];
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+
+    @foreach (Person person in personer)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>
+
+<b> Personer - Lista från ViewBag</b>
+@{
+    IEnumerable<Moment2.Models.Person> personer2 = (IEnumerable<Moment2.Models.Person>)ViewBag.personer;
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+
+    @foreach (Person person in personer2)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>
+
+<b> Personer - Lista från model </b>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+
+    @foreach (Moment2.Models.Person person in Model.PersonDetaljLista)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>

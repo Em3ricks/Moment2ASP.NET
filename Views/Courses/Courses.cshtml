@@ -1,0 +1,30 @@
+﻿@model Moment2.Models.Courses
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Kurslista</h1>
+
+<div>
+    <h4>Datan landar här</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Namn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Namn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kurskod)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kurskod)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-controller="Home" asp-action="Index6">Back to List</a>
+</div>

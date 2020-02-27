@@ -1,0 +1,35 @@
+﻿@model Moment2.Models.Courses
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Kurslista</h1>
+
+<h4>Skicka data från formulär till annan sida</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Courses">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Namn" class="control-label"></label>
+                <input asp-for="Namn" class="form-control" />
+                <span asp-validation-for="Namn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kurskod" class="control-label"></label>
+                <input asp-for="Kurskod" class="form-control" />
+                <span asp-validation-for="Kurskod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lägg till" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index6">Back to List</a>
+</div>
+

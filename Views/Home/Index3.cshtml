@@ -1,0 +1,17 @@
+﻿@model Moment2.Models.Item
+
+@{
+    ViewData["Title"] = "Index3";
+}
+
+<h1>JSON-Session från modell</h1>
+
+<p>
+    <b>Detta är modellen </b><br />
+    <b>Id:</b> @Model.Id  <br />
+    <b>Namn:</b> @Model.Name  <br />
+</p>
+
+<!--- Hämtar JSON-sträng från sessionsvariabel --->
+<b>JSON-Sträng hämtas med viewbag från sessionsvariabel</b>
+<p>@ViewBag.jsonsträng</p>
